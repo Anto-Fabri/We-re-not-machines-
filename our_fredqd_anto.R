@@ -67,8 +67,7 @@ fredqd <- function(file,date_start,date_end,transform) {
   # Prepare raw data
   rawdata <- readr::read_csv('current.csv',col_names = FALSE,skip = 3,cols(X1 = col_date(format = "%m/%d/%Y")))
   #ind_notna <- min(which(is.na(rawdata[,1]))) - 1
- 
-  #non capito bene
+
   #rawdata <- rawdata[1:ind_notna,] # remove NA rows 
   rawdata <- as.data.frame(rawdata)
 
