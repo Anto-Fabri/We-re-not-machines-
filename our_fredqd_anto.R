@@ -30,7 +30,7 @@ rm(list = ls())
 #install.packages("devtools")
 #devtools::install_github("cykbennie/fbi")
 
-#library("readr")
+library("readr")
 library("stats")
 library("pracma")
 library("devtools")
@@ -181,7 +181,7 @@ which(colsum >= 38)
 
 initial_data <- initial_data[,colSums(is.na(initial_data)) <= 38] 
 
-#initial_data <- na.omit(initial_data,)
+initial_data <- na.omit(initial_data,)
 
 final_data <- fredqd("current.csv",date_start=as.Date("1959-03-01"),date_end=as.Date("2022-09-01"),transform=TRUE)
 #sum(is.na(final_data))
